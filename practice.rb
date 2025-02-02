@@ -30,11 +30,15 @@ blockchain = [
 
 ben_balance = 0
 for transaction in blockchain
-  if blockchain[transaction]["from_user"] == "ben"
-    ben_balance = ben_balance - blockchain[transaction]["amount"]
-  elsif blockchain[transaction]["to_user"] == "ben"
-  ben_balance = ben_balance + blockchain[transaction]["amount"]
-  else
+  if ["from_user"] == "ben"
+    ben_balance = ben_balance - ["amount"]
+  elsif ["to_user"] == "ben"
+  ben_balance = ben_balance + ["amount"]
+  else nil
   end
 end
 puts ben_balance
+
+name = blockchain[0]["to user"]
+puts name
+# what's wrong w above?
