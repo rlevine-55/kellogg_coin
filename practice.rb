@@ -37,7 +37,37 @@ for transaction in blockchain
   else
   end
 end
-puts ben_balance
+puts "Ben's KelloggCoin balance is #{ben_balance}"
 
-name = blockchain[0]["to_user"]
-puts name
+brian_balance = 0
+for transaction in blockchain
+  if transaction["from_user"] == "brian"
+    brian_balance = brian_balance - transaction["amount"]
+  elsif transaction["to_user"] == "brian"
+  brian_balance = brian_balance + transaction["amount"]
+  else
+  end
+end
+puts "Brian's KelloggCoin balance is #{brian_balance}"
+
+evan_balance = 0
+for transaction in blockchain
+  if transaction["from_user"] == "evan"
+    evan_balance = evan_balance - transaction["amount"]
+  elsif transaction["to_user"] == "brian"
+  evan_balance = evan_balance + transaction["amount"]
+  else
+  end
+end
+puts "Evan's KelloggCoin balance is #{evan_balance}"
+
+anthony_balance = 0
+for transaction in blockchain
+  if transaction["from_user"] == "anthony"
+    anthony_balance = anthony_balance - transaction["amount"]
+  elsif transaction["to_user"] == "anthony"
+  anthony_balance = anthony_balance + transaction["amount"]
+  else
+  end
+end
+puts "Anthony's KelloggCoin balance is #{anthony_balance}"
